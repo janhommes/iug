@@ -1,0 +1,50 @@
+{
+  "name": "iug2024",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "copy:example1": "cp -r ../examples/example1/. ./",
+    "copy:example2": "cp -r ../examples/example2/. ./",
+    "copy:reset": "cp -r ../examples/reset/. ./ && rm -rf .github  && rm -rf ./src/app/hello && rm -rf ./src/app/map  && rm -rf ./src/assets/iug2024.png  && rm -rf ./src/assets/iug2025.png"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.2.11",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "@c8y/bootstrap": "1019.18.0",
+    "@c8y/client": "1019.18.0",
+    "@c8y/devkit": "1019.18.0",
+    "@c8y/ngx-components": "1019.18.0",
+    "@c8y/style": "1019.18.0",
+    "@c8y/websdk": "^1019.18.0",
+    "ngx-bootstrap": "11.0.2",
+    "rxjs": "^7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.11",
+    "@angular/cli": "^16.2.11",
+    "@angular/compiler-cli": "^16.2.0",
+    "@c8y/package-blueprint": "1019.7.15",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.1.3"
+  }
+}
