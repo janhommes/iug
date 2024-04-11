@@ -1,67 +1,66 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { CoreModule } from '@c8y/ngx-components';
-import { MapModule, PositionManagedObject } from '@c8y/ngx-components/map';
+import { MapModule } from '@c8y/ngx-components/map';
 
 @Component({
   selector: 'app-map',
   standalone: true,
   imports: [CoreModule, MapModule],
   template: `
-    <c8y-title>Pubs near you</c8y-title>
+    <c8y-title>Beaches near you</c8y-title>
     <div style="height: 100vh; width: 100%;">
       <c8y-map
-        [config]="{ center: ['53.330545', '-6.248782'], zoomLevel: 18 }"
+        [config]="{ center: [4.201523, 73.507263], zoomLevel: 13 }"
         [assets]="markers"
       >
-      <div *c8yMapPopup="let context">
-        {{ context.name }}
-      </div>
-    </c8y-map>
+        <div *c8yMapPopup="let context">
+          {{ context.name }}
+        </div>
+      </c8y-map>
     </div>
-  `
+  `,
 })
 export class MapComponent {
   markers: any = [
     {
       name: 'The Hotel',
       c8y_Position: {
-        lat: 53.330545,
-        lng: -6.248782,
+        lat: 4.176356,
+        lng: 73.513619,
       },
       icon: {
         name: 'hotel',
       },
     },
     {
-      name: 'M O’Briens',
+      name: 'Sunsite beach',
       c8y_Position: {
-        lat: 53.331250,
-        lng: -6.251720,
+        lat: 4.182862,
+        lng: 73.456074,
       },
       icon: {
-        name: 'beer',
+        name: 'sun',
       },
     },
     {
-      name: 'The Waterloo Bar',
+      name: 'Akolama beach',
       c8y_Position: {
-        lat: 53.333531,
-        lng: -6.243754,
+        lat: 4.212651,
+        lng: 73.484916,
       },
       icon: {
-        name: 'beer',
+        name: 'sun',
       },
     },
     {
-      name: 'B Bar',
+      name: 'City beach',
       c8y_Position: {
-        lat: 53.330340,
-        lng: -6.249426,
+        lat: 4.217787,
+        lng: 73.546411,
       },
       icon: {
-        name: 'beer',
+        name: 'sun',
       },
-    }
+    },
   ];
 }

@@ -9,7 +9,7 @@ import { CoreModule } from '@c8y/ngx-components';
     <c8y-title>
       Welcome
     </c8y-title>
-    <img src="assets/iug2024.png">
+    <img src="assets/iug2025.png">
   `,
   styles: [`
     img {
