@@ -1,0 +1,26 @@
+name: Angular C8Y Deployment
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: |
+        npm ci
+
+    - name: Deploy to C8Y
+      env:
+        C8Y_PASSWORD: ${{ secrets.c8y_password }}
+      run: |
+        npx ng deploy -U jan -P $C8Y_PASSWORD -T t16898043 -u http://jan.basic.stage.c8y.io
