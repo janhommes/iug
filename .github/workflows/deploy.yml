@@ -23,4 +23,4 @@ jobs:
       env:
         C8Y_PASSWORD: ${{ secrets.c8y_password }}
       run: |
-        npx ng deploy -U jan -P $C8Y_PASSWORD -T t16898043 -u http://jan.basic.stage.c8y.io
+        npx ng deploy -U jan -P $C8Y_PASSWORD -T t16898043 -u http://jan.basic.stage.c8y.io -t latest
