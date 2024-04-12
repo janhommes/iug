@@ -30,8 +30,8 @@ import { MapComponent } from './map/map.component';
     }),
     hookNavigator({
       path: '/map',
-      label: 'Pubs near you',
-      icon: 'beer'
+      label: 'Beaches near you',
+      icon: 'sun'
     }),
     hookRoute({
       path: 'map',
